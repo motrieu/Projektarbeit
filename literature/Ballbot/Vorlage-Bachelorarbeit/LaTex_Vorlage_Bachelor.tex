@@ -1,0 +1,290 @@
+\documentclass[12pt]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{a4}
+\usepackage{exscale,latexsym}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{epic}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[flushmargin]{footmisc}
+\usepackage{amsmath}
+\usepackage{europs}
+\usepackage{german}
+\usepackage{natbib}
+\usepackage[small]{caption}
+\usepackage{graphpap}
+\usepackage{rotating}
+\usepackage{amssymb}
+%\usepackage{wasysym}
+\usepackage[dvips]{epsfig}
+\usepackage{multirow}
+\usepackage{acronym}
+\usepackage[a4paper,left=4cm, right=1.5cm,top=2.5cm, bottom=2.0cm]{geometry} %Seitenränder
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\input{math}
+%\setstretch{1.5} %Zeilenabstand (1,5)
+
+\parindent 0mm
+\newcommand{\bflabel}[1]{\normalfont{\normalsize{#1}}\hfill}
+
+\pagestyle{plain}
+\pagestyle{fancy}
+%\cfoot{\thepage}
+
+ \setcounter{secnumdepth}{3}
+ \setcounter{tocdepth}{3}
+
+
+\begin{document}
+
+
+\clearpage
+\setlength{\hoffset}{-15mm}
+
+\pagenumbering{Roman}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Titelblatt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{titlepage}
+\newfont{\smc}{cmcsc10 at 16pt}
+
+\begin{center}
+\smc
+Lehrstuhl für Mathematische Systemtheorie\\
+Universität Stuttgart\\
+
+\vspace{2.5cm}
+
+\Large \textbf{BACHELORARBEIT}
+
+\vspace{2cm}
+
+\large\textbf{im Bachelorstudiengang \\Mathematik}\\
+
+\vspace{3cm}
+
+\fbox{\parbox{\columnwidth}{
+\begin{center}
+\large \textbf{TITEL DER ARBEIT}
+\end{center}}}
+
+
+\vspace{3cm}
+\begin{table}[h]
+	\centering
+		\begin{tabular}{ll}
+Erstgutachter/in:  & Prof. Dr. Carsten W. Scherer\\
+Zweitgutachter/in: & ....\\
+		\end{tabular}
+\end{table}
+
+\vspace{3cm}
+\normalsize vorgelegt von
+\end{center}
+
+\vfill
+\parbox{5cm}{\footnotesize
+            Name\\
+            Straße\\
+            PLZ + Ort\\
+            E-mail}
+\hfill
+\parbox{5cm}{\footnotesize
+            Studienfach\\
+            Fachsemester\\
+            Matrikelnummer\\
+            Abgabetermin: XX.XX.201X}
+
+\end{titlepage}
+
+\clearpage
+\setlength{\hoffset}{0mm}
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Inhaltsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thispagestyle{empty}
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Abbildungsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+%\pagenumbering{Roman}
+\setcounter{page}{1}
+\addcontentsline{toc}{section}{Abbildungsverzeichnis\vspace{0pt}}
+\listoffigures
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Tabellenverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\addcontentsline{toc}{section}{Tabellenverzeichnis\vspace{0pt}}
+\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Abkürzungsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section*{Abkürzungsverzeichnis} \markboth{ABKÜRZUNGSVERZEICHNIS}{ABKÜRZUNGSVERZEICHNIS}
+%Bitte alphabetisch ordnen!
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis\vspace{0pt}}
+\rule[0pt]{0mm}{10pt} %\rule[Offset]{Breite}{Höhe}
+\begin{acronym}[Musterdingsbums]
+\setlength{\itemsep}{-\parsep}
+	% A
+	\acro{O.B.d.A}{...}
+	% B
+	% C
+	% D
+	% E
+	% F
+	% G
+	% H
+	% I
+	% J
+	% K
+	% L
+	% M
+	% N
+	% O
+	% P
+	% Q
+	% R
+	% S
+	% T
+	% U
+	% V
+	% W
+	% X
+	% Y
+	% Z
+\end{acronym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Symbolverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section*{Symbolverzeichnis} \markboth{SYMBOLVERZEICHNIS}{SYMBOLVERZEICHNIS}
+%Die hier verwendeten Symbole stellen eine beispielhafte Auswahl dar.
+\addcontentsline{toc}{section}{Symbolverzeichnis\vspace{0pt}}
+\rule[0pt]{0mm}{10pt} %\rule[Offset]{Breite}{Höhe}
+\begin{acronym}[Musterdingsbums]
+\setlength{\itemsep}{-\parsep}
+	\acro{G}[$G(s)$]{Übertragungsfunktion eines LTI Systems}
+	\acro{R}[$(A,B,C,D)$]{Realization des Systems im Zustandsraum}
+	%\acro{C}[$C(\cdot)$]{Kostenfunktion}
+\end{acronym}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Bsp. für das Einfügen von Graphiken (extern) %%%%%%%%%%%%%%%%%%%%%%%
+% \begin{figure}[h!]
+% \includegraphics[width=\textwidth]{Pfad der Datei/Dateiname.Endung}\vspace{-0.5cm}
+% \caption{Bildunterschrift}
+% \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Beginn des Textteils %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\fancyhf{}				% Alle Felder loeschen
+\renewcommand{\sectionmark}[1]		% Schriftform für \section = Kaptälchen
+	{\markboth{\sc \thesection{} #1}{}}
+%\fancyhead[LO]{\leftmark}		% immer links oben Kapitel
+%\fancyhead[RE]{\rightmark}		% und rechts oben Unterkapitel
+%\fancyfoot[RE,RO]{\thepage}
+\addtolength{\headheight}{2.0pt}
+
+
+\newpage
+\pagenumbering{arabic}
+%Einleitung
+\section{Einleitung}
+Die Einleitung gliedert sich in den 3 Unterpunkten:
+
+  \subsection{Motivation} Die Einleitung muss den Leser zum weiterlesen bewegen. Hilfreich sind hier manchmal konkrete Beispiele für Anwendungen.
+   Die Problemstellung motivieren, erklären warum die Problemstellung behandelt wird und wofür eine Lösung des Problems wichtig ist.
+  \subsection{Zielsetzung} Motivieren Sie Ihr Thema und geben Sie deutlich die Problemstellung an!
+  Formulieren Sie zu Beginn der Arbeit die Forschungsfrage/n, die Sie in der Arbeit beantworten wollen. In der Regel haben Sie eine Hauptfrage. Zur Unterstützung können dann verschiedene Teilfragen formuliert werden.
+  \subsection{Aufbau der Arbeit} Am Ende der Einleitung muss die Struktur der Arbeit kurz erläutert werden.
+  Die Arbeit ist in $x$ Kapiteln aufgebaut. Im ersten Kapitel wird die Problemstellung ausführlich formuliert. Außerdem werden die in der Literatur vorhandene Verfahren zur Lösung des Problems diskutiert.
+
+   Das zweite und dritte Kapitel bilden zusammen der Kern dieser Arbeit. Dort wird das Lösungsansatz vorgestellt und erklärt.....
+   Im letzten Kapitel werden die vorgestellten Algorithmen und Ansätze durch Simulationsergnisse validiert....
+
+
+
+%\begin{figure}[h]
+%	\centering
+%		\includegraphics[width=0.65\textwidth]{Grafik11}
+%	\caption{Beispiel 1}
+%	\label{fig:Grafik11}
+%\end{figure}
+
+\newpage
+\section{Stand der Technik}
+Es ist wichtig, dass die Literatur studiert wird. In der Literatur angebotene Lösungsansätze sollten kurz diskutiert und besprochen werden und die Wahl des Verfahrens für die Bachelorarbeit sollte begründet werden.
+%Erklären, wie bisher an die Problemstellung herangegangen wurde und wichtige vorhandene Lösungsansätze kurz erklären und diskutieren (Vor und Nachteile).\\
+\newpage
+
+
+\section{Layout der Arbeit}
+
+\subsection{Die Gliederung}
+
+Eine gute Strukturierung ist wichtig! Die Arbeit muss einen roten Faden haben und Sie sollten Schwerpunkte setzen. Es geht nicht darum so viel wie möglich zu schreiben, sonder so viel wie nötig!
+
+\subsubsection{Regel 1}
+Die Gliederung der Arbeit sollte nicht zu tief sein. In der Regel sind mehr als 3 Gliederungsebenen nicht notwendig.
+
+\subsubsection{Regel 2}
+Eine Gliederungsebene sollte immer mindestens zwei Unterkapitel enthalten. Jede Arbeit enthält eine Einleitung und ein zusammenfassendes Schlusskapitel.
+
+\subsection{Quellenangaben}
+Quellenangaben sollten im Text erscheinen unter Angabe des/der Autors/Autoren und der Jahreszahl der Publikation. Wichtig ist, dass die Zuordnung der Quelle zum Literaturverzeichnis \textbf{eindeutig} ist! Zitieren Sie möglichst immer die Originalquelle! Sinngemäße Zitate werden mit "'Vgl."' eingeleitet. Das Literaturverzeichnis \textbf{muss} vollständig sein! Alle im Text aufgeführten Quellen müssen sich im Literaturverzeichnis wieder finden lassen und alle im Verzeichnis aufgeführten Quellen müssen mindestens einmal im Text erwähnt werden.
+
+%Zusammenfassung /Resümee /Ausblick
+\section{Zusammenfassung und Ausblick}%\sectionmark{Zusammenfassung}
+
+Hier können auch Schlußfolgerungen präsentiert und ein Ausblick gegeben werden.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\newpage\pagenumbering{Roman}
+\setcounter{page}{5}
+
+\begin{thebibliography}{99} \sectionmark{LITERATURVERZEICHNIS}
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+
+\harvarditem{Lessard}{2009}{L. Lessard, S. Lall}
+ L. Lessard, S. Lall.
+  Proceedings of the IEEE Conference on Decision and Control, p. 1621--1626, 2009.
+
+
+%\harvarditem{Mitroff}{1974}{Mitroff} II Mitroff, F Betz, LR Pondy, F Sagasti.
+%On managing science in the systems age: two schemes for the study of science as a whole systems
+%phenomenon. Interfaces 4, (1974), 46-- ??.
+
+\end{thebibliography}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% APPENDIX %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage\clearpage
+\addcontentsline{toc}{section}{Anhang}
+\begin{appendix}
+\section{Beweise}\sectionmark{Beweise}
+\subsection{Beweis 1}
+\begin{eqnarray}
+1+1 = 2
+\end{eqnarray}
+\end{appendix}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Eidesstattliche Erklärung %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section*{Eidesstattliche Erklärung}\sectionmark{Eidesstattliche Erklärung}
+\addcontentsline{toc}{section}{Eidesstattliche Erklärung}%\addtocontents{toc}{\vfill}
+Ich erkläre, dass ich meine Bachelor-Arbeit [\emph{Titel der Arbeit}] selbstständig und ohne Benutzung anderer als der angegebenen Hilfsmittel angefertigt habe und dass ich alle Stellen, die ich wörtlich oder sinngemäß aus Veröffentlichungen entnommen habe, als solche kenntlich gemacht habe. Die Arbeit hat bisher in gleicher oder ähnlicher Form oder auszugsweise noch keiner Prüfungsbehörde vorgelegen. \\
+%\\
+%Ich versichere, dass die eingereichte schriftliche Fassung der auf dem beigefügten Medium gespeicherten Fassung entspricht.[\emph{Dieser Zusatz ist nur erforderlich, wenn die Abschlussarbeit auch als Datei abgegeben worden ist.}]\\\\\\
+\noindent Stuttgart, den XX.XX.2013
+\begin{flushright}
+$\overline{~~~~~~~~~\mbox{(Name des Kandidaten)}~~~~~~~~~}$
+\end{flushright}
+\end{document} 
