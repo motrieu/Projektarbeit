@@ -217,9 +217,18 @@ Die Einleitung gliedert sich in den 3 Unterpunkten:
 
 \newpage
 \section{Mathematical model}
-In order to derive the equations of motion for the model, the Lagrangian approach is used. The model is largely based on the model used in (Seb13) and uses refinments 
+In order to derive the equations of motion for the model, the Lagrangian approach is used. The model is largely based on the model used in Seb13 and uses refinments from 899_BALLBOT where needed
 \subsection{Assumptions}
-
+In order to simplify the model a few assumptions are made:
+\begin{enumerate}
+\item the ballbot consists of two parts: a rigid body on top of a rigid ball
+\item the control torque is applied directly onto the ball
+\item no loss through friction
+\item no slip is occuring
+\item the motion is decoupled in the zx- and zy-plane
+\end{enumerate}•
+As the motion is decoupled, instead of one complex three-dimensional model, two simpler two-dimensional models can be used.
+Furthermore, because of the application of the driving torque onto the ball, the drive wheel is ignored. This can be done, as the moment of inertia of the drive wheel is way smaller than the moment of inertia of the ball.
 
 
 \newpage
