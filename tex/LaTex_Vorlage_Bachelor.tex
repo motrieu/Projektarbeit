@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{a4}
 \usepackage{exscale,latexsym}
 \usepackage{graphicx}
@@ -9,7 +9,7 @@
 \onehalfspacing
 \usepackage[flushmargin]{footmisc}
 \usepackage{amsmath}
-\usepackage{europs}
+%\usepackage{europs}
 \usepackage{german}
 \usepackage{natbib}
 \usepackage[small]{caption}
@@ -20,7 +20,7 @@
 \usepackage[dvips]{epsfig}
 \usepackage{multirow}
 \usepackage{acronym}
-\usepackage[a4paper,left=4cm, right=1.5cm,top=2.5cm, bottom=2.0cm]{geometry} %Seitenränder
+\usepackage[a4paper,left=4cm, right=1.5cm,top=2.5cm, bottom=2.0cm]{geometry} %Seitenrï¿½nder
 \usepackage{fancyhdr}
 \usepackage{setspace}
 \input{math}
@@ -51,8 +51,8 @@
 
 \begin{center}
 \smc
-Lehrstuhl für Mathematische Systemtheorie\\
-Universität Stuttgart\\
+Lehrstuhl fuer Mathematische Systemtheorie\\
+Universitaet Stuttgart\\
 
 \vspace{2.5cm}
 
@@ -86,7 +86,7 @@ Zweitgutachter/in: & ....\\
 \vfill
 \parbox{5cm}{\footnotesize
             Name\\
-            Straße\\
+            Strasse\\
             PLZ + Ort\\
             E-mail}
 \hfill
@@ -123,12 +123,12 @@ Zweitgutachter/in: & ....\\
 \addcontentsline{toc}{section}{Tabellenverzeichnis\vspace{0pt}}
 \listoftables
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Abkürzungsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Abkï¿½rzungsverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\section*{Abkürzungsverzeichnis} \markboth{ABKÜRZUNGSVERZEICHNIS}{ABKÜRZUNGSVERZEICHNIS}
+\section*{Abkuerzungsverzeichnis} \markboth{ABKÃœRZUNGSVERZEICHNIS}{ABKÃœRZUNGSVERZEICHNIS}
 %Bitte alphabetisch ordnen!
-\addcontentsline{toc}{section}{Abkürzungsverzeichnis\vspace{0pt}}
-\rule[0pt]{0mm}{10pt} %\rule[Offset]{Breite}{Höhe}
+\addcontentsline{toc}{section}{AbkÃ¼rzungsverzeichnis\vspace{0pt}}
+\rule[0pt]{0mm}{10pt} %\rule[Offset]{Breite}{Hï¿½he}
 \begin{acronym}[Musterdingsbums]
 \setlength{\itemsep}{-\parsep}
 	% A
@@ -165,15 +165,15 @@ Zweitgutachter/in: & ....\\
 \section*{Symbolverzeichnis} \markboth{SYMBOLVERZEICHNIS}{SYMBOLVERZEICHNIS}
 %Die hier verwendeten Symbole stellen eine beispielhafte Auswahl dar.
 \addcontentsline{toc}{section}{Symbolverzeichnis\vspace{0pt}}
-\rule[0pt]{0mm}{10pt} %\rule[Offset]{Breite}{Höhe}
+\rule[0pt]{0mm}{10pt} %\rule[Offset]{Breite}{HÃ¶he}
 \begin{acronym}[Musterdingsbums]
 \setlength{\itemsep}{-\parsep}
-	\acro{G}[$G(s)$]{Übertragungsfunktion eines LTI Systems}
+	\acro{G}[$G(s)$]{Ãœbertragungsfunktion eines LTI Systems}
 	\acro{R}[$(A,B,C,D)$]{Realization des Systems im Zustandsraum}
 	%\acro{C}[$C(\cdot)$]{Kostenfunktion}
 \end{acronym}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%% Bsp. für das Einfügen von Graphiken (extern) %%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Bsp. fï¿½r das Einfï¿½gen von Graphiken (extern) %%%%%%%%%%%%%%%%%%%%%%%
 % \begin{figure}[h!]
 % \includegraphics[width=\textwidth]{Pfad der Datei/Dateiname.Endung}\vspace{-0.5cm}
 % \caption{Bildunterschrift}
@@ -182,7 +182,7 @@ Zweitgutachter/in: & ....\\
 %%%%%%%%%%%%%%%%%%%%%%%%%% Beginn des Textteils %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \fancyhf{}				% Alle Felder loeschen
-\renewcommand{\sectionmark}[1]		% Schriftform für \section = Kaptälchen
+\renewcommand{\sectionmark}[1]		% Schriftform fï¿½r \section = Kaptï¿½lchen
 	{\markboth{\sc \thesection{} #1}{}}
 %\fancyhead[LO]{\leftmark}		% immer links oben Kapitel
 %\fancyhead[RE]{\rightmark}		% und rechts oben Unterkapitel
@@ -196,15 +196,15 @@ Zweitgutachter/in: & ....\\
 \section{Einleitung}
 Die Einleitung gliedert sich in den 3 Unterpunkten:
 
-  \subsection{Motivation} Die Einleitung muss den Leser zum weiterlesen bewegen. Hilfreich sind hier manchmal konkrete Beispiele für Anwendungen.
-   Die Problemstellung motivieren, erklären warum die Problemstellung behandelt wird und wofür eine Lösung des Problems wichtig ist.
+  \subsection{Motivation} Die Einleitung muss den Leser zum weiterlesen bewegen. Hilfreich sind hier manchmal konkrete Beispiele fÃ¼r Anwendungen.
+   Die Problemstellung motivieren, erklaren warum die Problemstellung behandelt wird und wofÃ¼r eine LÃ¶sung des Problems wichtig ist.
   \subsection{Zielsetzung} Motivieren Sie Ihr Thema und geben Sie deutlich die Problemstellung an!
-  Formulieren Sie zu Beginn der Arbeit die Forschungsfrage/n, die Sie in der Arbeit beantworten wollen. In der Regel haben Sie eine Hauptfrage. Zur Unterstützung können dann verschiedene Teilfragen formuliert werden.
-  \subsection{Aufbau der Arbeit} Am Ende der Einleitung muss die Struktur der Arbeit kurz erläutert werden.
-  Die Arbeit ist in $x$ Kapiteln aufgebaut. Im ersten Kapitel wird die Problemstellung ausführlich formuliert. Außerdem werden die in der Literatur vorhandene Verfahren zur Lösung des Problems diskutiert.
+  Formulieren Sie zu Beginn der Arbeit die Forschungsfrage/n, die Sie in der Arbeit beantworten wollen. In der Regel haben Sie eine Hauptfrage. Zur UnterstÃ¼tzung kÃ¶nnen dann verschiedene Teilfragen formuliert werden.
+  \subsection{Aufbau der Arbeit} Am Ende der Einleitung muss die Struktur der Arbeit kurz erlÃ¤utert werden.
+  Die Arbeit ist in $x$ Kapiteln aufgebaut. Im ersten Kapitel wird die Problemstellung ausfÃ¼hrlich formuliert. AuÃŸerdem werden die in der Literatur vorhandene Verfahren zur LÃ¶sung des Problems diskutiert.
 
-   Das zweite und dritte Kapitel bilden zusammen der Kern dieser Arbeit. Dort wird das Lösungsansatz vorgestellt und erklärt.....
-   Im letzten Kapitel werden die vorgestellten Algorithmen und Ansätze durch Simulationsergnisse validiert....
+   Das zweite und dritte Kapitel bilden zusammen der Kern dieser Arbeit. Dort wird das LÃ¶sungsansatz vorgestellt und erklÃ¤rt.....
+   Im letzten Kapitel werden die vorgestellten Algorithmen und AnsÃ¤tze durch Simulationsergnisse validiert....
 
 
 
@@ -216,9 +216,16 @@ Die Einleitung gliedert sich in den 3 Unterpunkten:
 %\end{figure}
 
 \newpage
+\section{Mathematical model}
+In order to derive the equations of motion for the model, the Lagrangian approach is used. The model is largely based on the model used in (Seb13) and uses refinments 
+\subsection{Assumptions}
+
+
+
+\newpage
 \section{Stand der Technik}
-Es ist wichtig, dass die Literatur studiert wird. In der Literatur angebotene Lösungsansätze sollten kurz diskutiert und besprochen werden und die Wahl des Verfahrens für die Bachelorarbeit sollte begründet werden.
-%Erklären, wie bisher an die Problemstellung herangegangen wurde und wichtige vorhandene Lösungsansätze kurz erklären und diskutieren (Vor und Nachteile).\\
+Es ist wichtig, dass die Literatur studiert wird. In der Literatur angebotene LÃ¶sungsansÃ¤tze sollten kurz diskutiert und besprochen werden und die Wahl des Verfahrens fÃ¼r die Bachelorarbeit sollte begrÃ¼ndet werden.
+%Erklï¿½ren, wie bisher an die Problemstellung herangegangen wurde und wichtige vorhandene Lï¿½sungsansï¿½tze kurz erklï¿½ren und diskutieren (Vor und Nachteile).\\
 \newpage
 
 
@@ -226,21 +233,21 @@ Es ist wichtig, dass die Literatur studiert wird. In der Literatur angebotene Lö
 
 \subsection{Die Gliederung}
 
-Eine gute Strukturierung ist wichtig! Die Arbeit muss einen roten Faden haben und Sie sollten Schwerpunkte setzen. Es geht nicht darum so viel wie möglich zu schreiben, sonder so viel wie nötig!
+Eine gute Strukturierung ist wichtig! Die Arbeit muss einen roten Faden haben und Sie sollten Schwerpunkte setzen. Es geht nicht darum so viel wie mÃ¶glich zu schreiben, sonder so viel wie nÃ¶tig!
 
 \subsubsection{Regel 1}
 Die Gliederung der Arbeit sollte nicht zu tief sein. In der Regel sind mehr als 3 Gliederungsebenen nicht notwendig.
 
 \subsubsection{Regel 2}
-Eine Gliederungsebene sollte immer mindestens zwei Unterkapitel enthalten. Jede Arbeit enthält eine Einleitung und ein zusammenfassendes Schlusskapitel.
+Eine Gliederungsebene sollte immer mindestens zwei Unterkapitel enthalten. Jede Arbeit enthÃ¤lt eine Einleitung und ein zusammenfassendes Schlusskapitel.
 
 \subsection{Quellenangaben}
-Quellenangaben sollten im Text erscheinen unter Angabe des/der Autors/Autoren und der Jahreszahl der Publikation. Wichtig ist, dass die Zuordnung der Quelle zum Literaturverzeichnis \textbf{eindeutig} ist! Zitieren Sie möglichst immer die Originalquelle! Sinngemäße Zitate werden mit "'Vgl."' eingeleitet. Das Literaturverzeichnis \textbf{muss} vollständig sein! Alle im Text aufgeführten Quellen müssen sich im Literaturverzeichnis wieder finden lassen und alle im Verzeichnis aufgeführten Quellen müssen mindestens einmal im Text erwähnt werden.
+Quellenangaben sollten im Text erscheinen unter Angabe des/der Autors/Autoren und der Jahreszahl der Publikation. Wichtig ist, dass die Zuordnung der Quelle zum Literaturverzeichnis \textbf{eindeutig} ist! Zitieren Sie mÃ¶glichst immer die Originalquelle! SinngemÃ¤ÃŸe Zitate werden mit "'Vgl."' eingeleitet. Das Literaturverzeichnis \textbf{muss} vollstÃ¤ndig sein! Alle im Text aufgefÃ¼hrten Quellen mÃ¼ssen sich im Literaturverzeichnis wieder finden lassen und alle im Verzeichnis aufgefÃ¼hrten Quellen mÃ¼ssen mindestens einmal im Text erwÃ¤hnt werden.
 
-%Zusammenfassung /Resümee /Ausblick
+%Zusammenfassung /Resï¿½mee /Ausblick
 \section{Zusammenfassung und Ausblick}%\sectionmark{Zusammenfassung}
 
-Hier können auch Schlußfolgerungen präsentiert und ein Ausblick gegeben werden.
+Hier kÃ¶nnen auch SchluÃŸfolgerungen prÃ¤sentiert und ein Ausblick gegeben werden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -276,13 +283,13 @@ Hier können auch Schlußfolgerungen präsentiert und ein Ausblick gegeben werden.
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%% Eidesstattliche Erklärung %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%% Eidesstattliche Erklï¿½rung %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-\section*{Eidesstattliche Erklärung}\sectionmark{Eidesstattliche Erklärung}
-\addcontentsline{toc}{section}{Eidesstattliche Erklärung}%\addtocontents{toc}{\vfill}
-Ich erkläre, dass ich meine Bachelor-Arbeit [\emph{Titel der Arbeit}] selbstständig und ohne Benutzung anderer als der angegebenen Hilfsmittel angefertigt habe und dass ich alle Stellen, die ich wörtlich oder sinngemäß aus Veröffentlichungen entnommen habe, als solche kenntlich gemacht habe. Die Arbeit hat bisher in gleicher oder ähnlicher Form oder auszugsweise noch keiner Prüfungsbehörde vorgelegen. \\
+\section*{Eidesstattliche ErklÃ¤rung}\sectionmark{Eidesstattliche ErklÃ¤rung}
+\addcontentsline{toc}{section}{Eidesstattliche ErklÃ¤rung}%\addtocontents{toc}{\vfill}
+Ich erklÃ¤re, dass ich meine Bachelor-Arbeit [\emph{Titel der Arbeit}] selbststÃ¤ndig und ohne Benutzung anderer als der angegebenen Hilfsmittel angefertigt habe und dass ich alle Stellen, die ich wÃ¶rtlich oder sinngemÃ¤ÃŸ aus VerÃ¶ffentlichungen entnommen habe, als solche kenntlich gemacht habe. Die Arbeit hat bisher in gleicher oder Ã¤hnlicher Form oder auszugsweise noch keiner PrÃ¼fungsbehÃ¶rde vorgelegen. \\
 %\\
-%Ich versichere, dass die eingereichte schriftliche Fassung der auf dem beigefügten Medium gespeicherten Fassung entspricht.[\emph{Dieser Zusatz ist nur erforderlich, wenn die Abschlussarbeit auch als Datei abgegeben worden ist.}]\\\\\\
+%Ich versichere, dass die eingereichte schriftliche Fassung der auf dem beigefï¿½gten Medium gespeicherten Fassung entspricht.[\emph{Dieser Zusatz ist nur erforderlich, wenn die Abschlussarbeit auch als Datei abgegeben worden ist.}]\\\\\\
 \noindent Stuttgart, den XX.XX.2013
 \begin{flushright}
 $\overline{~~~~~~~~~\mbox{(Name des Kandidaten)}~~~~~~~~~}$
