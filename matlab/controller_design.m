@@ -7,4 +7,5 @@ init_cond = [0, 5, .3, .3];
 
 Q = [3 0 0 0; 0 5 0 0; 0 0 0 0; 0 0 0 0]
 R = 0.0013
-[F, P, E] = lqr(A_num, b_num, Q, R)
+Ts = 0.004
+[F, P, E] = lqrd(A_num, b_num, Q, R, Ts)
