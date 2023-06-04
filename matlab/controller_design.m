@@ -41,3 +41,13 @@ Cz = [1 0 0 0];
 Dz = 0;
 M = (Dz - (Cz - Dz*F) * inv(A_num-b_num*F) * b_num);
 G = 1 / M;
+
+% Nonlinear Model
+load envs\nonlinear_fo_model_v001.mat
+
+% fo_sys_sub = matlabFunction(fo_sys, "vars", {"t", "q"});
+% y_sol = ode45(fo_sys_sub, [0 10], init_cond);
+% 
+% t_values = linspace(0, 20, 100);
+% y_values = deval(y_sol, t_values, 1)
+% plot(t_values, y_values)
